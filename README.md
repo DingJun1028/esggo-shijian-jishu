@@ -14,6 +14,7 @@
 
 | 章節 | 主題 | 狀態 | 來源 |
 |------|------|------|------|
+| [INDEX · 任務速查索引](./INDEX.md) | 跨章節：按任務/工具/組合流程找章 | ✅ 已收錄 | 本技書導航 |
 | [00 · 章節模板](./TEMPLATE.md) | 新增章節的寫作規範 | ✅ 已收錄 | 本技書約定 |
 | [01 · GitHub 遠端倉庫整理](./chapters/01-github-remote-organization.md) | clone / create / fork / settings / 分支保護 / Releases / Actions | ✅ 已收錄 | `github-repo-management` v1.1.0 |
 | [02 · GitHub PR 協作流程](./chapters/02-github-pr-workflow.md) | 分支 / 提交 / 開 PR / 監控 CI / 合併 | ✅ 已收錄 | `github-pr-workflow` v1.1.0 |
@@ -31,9 +32,10 @@
 
 ## 如何使用
 
-1. 找章節：依目錄或 `search_files` 關鍵字檢索。
-2. 照做：每章節的命令可直接複製執行；`gh` 優先，`git`+`curl` 為降級方案。
-3. 補章節：複製 `TEMPLATE.md` 為 `chapters/NN-<slug>.md`，並於本目錄表補一列。
+1. **先查索引**：[INDEX.md](./INDEX.md) 按「任務 / 工具 / 組合流程」快速定位章節。
+2. 找章節：依目錄或 `search_files` 關鍵字檢索。
+3. 照做：每章節的命令可直接複製執行；`gh` 優先，`git`+`curl` 為降級方案。
+4. 補章節：複製 `TEMPLATE.md` 為 `chapters/NN-<slug>.md`，並於本目錄表補一列。
 
 ## 慣例
 
