@@ -31,7 +31,8 @@
 | [12 · 計畫模式 Plan Mode](./chapters/12-plan-mode.md) | 只規劃不執行 / 一口大小任務 / DRY·YAGNI·TDD | ✅ 已收錄 | `plan` v2.0.0 |
 | [13 · 提交前程式碼審查](./chapters/13-pre-commit-code-review.md) | 靜態掃描 / 獨立審查者 / 自動修迴圈 / [verified] | ✅ 已收錄 | `requesting-code-review` v2.0.0 |
 | [14 · 子代理編排](./chapters/14-subagent-orchestration.md) | delegate_task 規模執行 / 兩階段審查 / 批次平行 | ✅ 已收錄 | `delegate_task` + two-stage 模式 |
-| 15 · ... | （待補：監控與事故、本地環境、安全強化…見 MECE §4） | ⏳ 規劃中 | — |
+| [15 · 監控與事故響應](./chapters/15-monitoring-incident-runbook.md) | 三層探活 / 事故分級 / 回滾 runbook（G3） | ✅ 已收錄 | 第 04 章 + esggo-core 實踐 |
+| 16 · ... | （待補：本地環境上手 G4 / 安全強化 G5 / 設計 Design） | ⏳ 規劃中 | — |
 
 ## 如何使用
 
