@@ -25,7 +25,9 @@
 | [08 · ESGGO 全域全端總覽](./chapters/08-esggo-full-stack.md) | 組件架構 / 雙重部署 / Docker / Firestore / 故障排除 | ✅ 已收錄 | `esggo-full-stack`（對齊第 04/05/06/07） |
 | [09 · CI/CD 推送到 VPS](./chapters/09-cicd-push-to-deploy.md) | GitHub Actions 自動部署 / SCP / nginx reload / cron 備援 | ✅ 已收錄 | `vps-push-to-deploy` |
 | [10 · 測試驅動開發 TDD](./chapters/10-test-driven-development.md) | 紅綠重構 / 鐵律 / 反模式 / Hermes 整合 | ✅ 已收錄 | `test-driven-development` v1.1.0 |
-| 11 · ... | （待補：systematic-debugging、plan、其他實戰） | ⏳ 規劃中 | — |
+| [11 · 系統化除錯](./chapters/11-systematic-debugging.md) | 四階段找根因 / 回饋迴圈 / 三則規則 | ✅ 已收錄 | `systematic-debugging` v1.1.0 |
+| [12 · 計畫模式 Plan Mode](./chapters/12-plan-mode.md) | 只規劃不執行 / 一口大小任務 / DRY·YAGNI·TDD | ✅ 已收錄 | `plan` v2.0.0 |
+| 13 · ... | （待補：subagent-driven-development、requesting-code-review、其他實戰） | ⏳ 規劃中 | — |
 
 ## 如何使用
 
