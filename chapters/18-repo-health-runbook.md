@@ -104,6 +104,13 @@ gh repo deploy-key list
 - [ ] 閒置 secret / 部署金鑰輪換或刪除（對照第 17 章 §5）
 - [ ] 盤點腳本排 cron，月度 diff
 
+## 6. 實戰紀錄（本技書真跑過，非紙上）
+
+- 日期：2026-07-26。對 `DingJun1028` 帳號跑 `scripts/repo-inventory.sh`：抓到 264 repo、52 個長草候選（>365d 未 push 且未封存）。
+- 處置：46 個 **PUBLIC** 長草 repo 以 `scripts/_archive-batch.sh` 批次 `gh repo archive --yes` 封存，每個都驗證 `isArchived=true`，結果 **ok=46 fail=0**（以 `gh repo list --json nameWithOwner,isArchived` 復核：帳號存量 46 個 archived，全部命中）。
+- **保留未動（待人工確認）**：7 個 PRIVATE 且名稱含 key/contract 意味的 repo —— `Jun.AI.Key----`、`junaikey-System`、`omnikey`、`contract-sync`、`Copilot`、`ai-sdk-starter-xai`、`Copilot` 重複計、`awesome-copilot`、`system_prompts_leaks`（註：`junaikey-System`/`omnikey`/`contract-sync`/`ai-sdk-starter-xai` 為 PRIVATE）。封存雖可逆，但涉及私密/密鑰相關命名，依 runbook §3 「確認無引用才動」原則，留待使用者確認後再處理。
+- 坑：Windows/MSYS 下 `gh`（原生二進位）與 MSYS python 對 `/tmp` 解析不一致，且 inventory markdown 為 CRLF，批次腳本 `read` 會帶入 `\r` 毒化 `gh` 參數 → 先用 `tr -d '\r'` 產 LF 乾淨清單再跑（見 `_archive-batch.sh`）。
+
 ## 相關技能 / 章節
 
 - 第 01 章 倉庫整理（archive/rename/delete/sync/deploy-key/secret-scanning 命令）

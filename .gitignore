@@ -1,3 +1,7 @@
 # 倉庫盤點腳本產出的當期快照（見 scripts/repo-inventory.sh / 第18章）
 inventory/
 .repo-inventory-tmp.json
+# 封存批次用的暫列檔（見 scripts/_archive-batch.sh）
+.archive-list.txt
+.archive-list.lf.txt
+.archive-result.log
