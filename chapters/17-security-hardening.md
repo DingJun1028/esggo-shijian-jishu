@@ -82,4 +82,5 @@ pnpm audit                  # ✅ 只用這個
 ## 相關技能 / 章節
 
 - 第 03 章 Actions Secrets、第 13 章 提交前審查（靜態掃描）、第 09 章 CI、第 04 章 VPS 權限、第 15 章 營運探活
+- 第 18 章 倉庫健康檢查 Runbook（§5 Secrets 衛生的週期化盤點與輪換儀式）
 - `agent-secrets-management`（secret manager 模式）
