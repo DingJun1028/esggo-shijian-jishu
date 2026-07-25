@@ -36,6 +36,7 @@
 | [16 · 本地開發環境上手](./chapters/16-local-dev-onboarding.md) | 各 repo 上手對照 / .env / 換機注意（G4） | ✅ 已收錄 | 各章實證 + 記憶規範 |
 | [17 · 安全強化](./chapters/17-security-hardening.md) | 依賴/注入/最小權限/SSRF（G5，超 secrets） | ✅ 已收錄 | 第 13 章 + pnpm 規範 |
 | [18 · 遠端倉庫健康檢查 Runbook](./chapters/18-repo-health-runbook.md) | 收納/清理週期化：盤點/封存/刪除/同步/保護/secret 輪換（+`scripts/repo-inventory.sh`） | ✅ 已收錄 | 第 01 章 + 第 17 章 §5 |
+| [19 · 前端測試基礎設施](./chapters/19-frontend-test-infra.md) | vitest/jest config/環境/globals/覆蓋率/CI（補第10章 pytest 外的 runner 細節） | ✅ 已收錄 | `test-driven-development` v1.1.0 + esggo-learning-center |
 | — | （Design 缺口由第 12 章 plan 架構段涵蓋，不另開篇） | ✅ 已涵蓋 | 第 12 章 |
 
 ## 如何使用

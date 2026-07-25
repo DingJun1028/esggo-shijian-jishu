@@ -39,14 +39,14 @@
 | Review 審查 | ✅ | 13 | 已涵蓋 |
 | Collaborate 協作/版本 | ✅ | 01, 02, 18 | 已涵蓋（含倉庫收納/清理與週期性健康檢查 runbook） |
 | Build 建置 | ✅ | 06 | 已涵蓋 |
-| Test 測試基礎設施 | ⚠️ | 10（含 pytest） | 部分；vitest/jest 實作細節未專章 |
+| Test 測試基礎設施 | ✅ | 10（TDD 心法/pytest）、19（vitest/jest runner 細節） | 已涵蓋（心法 + 前端 runner 實作） |
 | Deploy 部署 | ✅ | 04, 05, 09, 07 | 已涵蓋（自管 infra / 託管 PaaS / pipeline / 前品質） |
 | Operate/Monitor 營運監控 | ✅ | 15 | 已涵蓋（三層探活 / 回滾 / 事故） |
 | Secure 安全 | ✅ | 03, 17 | 已涵蓋（secrets + 依賴/注入/權限/SSRF） |
 | Execute-at-scale 規模執行 | ✅ | 14 | 已涵蓋（delegate_task 子代理編排） |
 | Onboard 環境上手 | ✅ | 16 | 已涵蓋 |
 
-**結論**：B/C/D/E/A 五大階段已窮盡；**Design、Review、Operate、Secure、Scale、Onboard** 六處有缺口（G1–G5 + Design）。這就是下一輪該補的方向。
+**結論**：B/C/D/E/A 五大階段已窮盡；**Design、Review、Operate、Secure、Scale、Onboard** 六處缺口（G1–G5 + Design）已全部閉合。另 **Test 測試基礎設施** 原標「部分」（僅 pytest），已由第 19 章補齊 vitest/jest runner 細節，達 Collectively Exhaustive。這就是本技書當前完整度。
 
 ## 4. 補齊窮盡性的建議章節（按 MECE 順序）
 
