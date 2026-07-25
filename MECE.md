@@ -35,31 +35,29 @@
 |--------------|------|----------|------|
 | Plan 規劃 | ✅ | 12 | 已涵蓋 |
 | Design 設計 | ⚠️ | — | 缺口（架構決策、需求拆解未專章） |
-| Develop 開發 | ✅ | 10, 11 | 已涵蓋 |
-| Review 審查 | ❌ | — | **缺口 G1**：程式碼審查未專章 |
+| Design 設計 | ⚠️ | — | **已由第 12 章 plan 的「Architecture / 作法」段涵蓋**（不另開篇，避免重疊） |
+| Review 審查 | ✅ | 13 | 已涵蓋 |
 | Collaborate 協作/版本 | ✅ | 01, 02 | 已涵蓋 |
 | Build 建置 | ✅ | 06 | 已涵蓋 |
 | Test 測試基礎設施 | ⚠️ | 10（含 pytest） | 部分；vitest/jest 實作細節未專章 |
 | Deploy 部署 | ✅ | 04, 05, 09, 07 | 已涵蓋（自管 infra / 託管 PaaS / pipeline / 前品質） |
-| Operate/Monitor 營運監控 | ⚠️ | 04（僅健康檢查） | **缺口 G3**：觀測/告警/回滾/事故未專章 |
-| Secure 安全 | ⚠️ | 03（僅 secrets） | **缺口 G5**：依賴/供應鏈/SSRF 等未專章 |
-| Execute-at-scale 規模執行 | ❌ | — | **缺口 G2**：代理驅動開發未專章 |
-| Onboard 環境上手 | ❌ | — | **缺口 G4**：本地開發環境/新人上手未專章 |
+| Operate/Monitor 營運監控 | ✅ | 15 | 已涵蓋（三層探活 / 回滾 / 事故） |
+| Secure 安全 | ✅ | 03, 17 | 已涵蓋（secrets + 依賴/注入/權限/SSRF） |
+| Execute-at-scale 規模執行 | ✅ | 14 | 已涵蓋（delegate_task 子代理編排） |
+| Onboard 環境上手 | ✅ | 16 | 已涵蓋 |
 
 **結論**：B/C/D/E/A 五大階段已窮盡；**Design、Review、Operate、Secure、Scale、Onboard** 六處有缺口（G1–G5 + Design）。這就是下一輪該補的方向。
 
 ## 4. 補齊窮盡性的建議章節（按 MECE 順序）
 
-按生命週期順序、且不與現有章重疊地提案：
-
-| 預定章 | 填補缺口 | 歸屬支柱 | 來源技能（待載） |
-|--------|----------|----------|------------------|
-| 13 程式碼審查 | G1 Review | C（協作） | `requesting-code-review` |
-| 14 代理驅動開發 | G2 Scale | A（規劃執行） | `subagent-driven-development` |
-| 15 監控與事故響應 | G3 Operate | E（部署營運） | 實戰整理（health check 擴寫） |
-| 16 本地開發環境 | G4 Onboard | D（建置） | 實戰整理 |
-| 17 安全強化（超 secrets） | G5 Secure | F（跨切面） | 實戰整理 |
-
+> **狀態更新**：G1–G5 與 Design 缺口已全部閉合（見 §3 表格）。
+> - G1 Review → 第 13 章
+> - G2 Scale → 第 14 章
+> - G3 Operate → 第 15 章
+> - G4 Onboard → 第 16 章
+> - G5 Secure → 第 17 章（第 03 章管 secrets 子題）
+> - Design → 第 12 章 plan 的「Architecture / 作法」段涵蓋（不另開篇，避免重疊）
+>
 > 補到 17 後，生命週期六缺口全閉合 → 達成 Collectively Exhaustive。
 
 ## 5. 用法

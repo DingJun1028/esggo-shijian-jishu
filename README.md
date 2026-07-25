@@ -32,7 +32,9 @@
 | [13 · 提交前程式碼審查](./chapters/13-pre-commit-code-review.md) | 靜態掃描 / 獨立審查者 / 自動修迴圈 / [verified] | ✅ 已收錄 | `requesting-code-review` v2.0.0 |
 | [14 · 子代理編排](./chapters/14-subagent-orchestration.md) | delegate_task 規模執行 / 兩階段審查 / 批次平行 | ✅ 已收錄 | `delegate_task` + two-stage 模式 |
 | [15 · 監控與事故響應](./chapters/15-monitoring-incident-runbook.md) | 三層探活 / 事故分級 / 回滾 runbook（G3） | ✅ 已收錄 | 第 04 章 + esggo-core 實踐 |
-| 16 · ... | （待補：本地環境上手 G4 / 安全強化 G5 / 設計 Design） | ⏳ 規劃中 | — |
+| [16 · 本地開發環境上手](./chapters/16-local-dev-onboarding.md) | 各 repo 上手對照 / .env / 換機注意（G4） | ✅ 已收錄 | 各章實證 + 記憶規範 |
+| [17 · 安全強化](./chapters/17-security-hardening.md) | 依賴/注入/最小權限/SSRF（G5，超 secrets） | ✅ 已收錄 | 第 13 章 + pnpm 規範 |
+| — | （Design 缺口由第 12 章 plan 架構段涵蓋，不另開篇） | ✅ 已涵蓋 | 第 12 章 |
 
 ## 如何使用
 
