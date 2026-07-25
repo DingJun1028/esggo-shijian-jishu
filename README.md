@@ -21,7 +21,8 @@
 | [04 · VPS 部署實踐](./chapters/04-vps-deployment.md) | OCI / nginx / certbot / Cloudflare / Docker / 健康檢查 | ✅ 已收錄 | `esggo-vps-toolkit` |
 | [05 · Firebase 學習中心部署](./chapters/05-firebase-learning-center-deploy.md) | verify→deploy 儀式 / lint 目標 / 地雷 | ✅ 已收錄 | `esggo-learning-center-verify-deploy` v1.0.0 |
 | [06 · Docker CLI 速查（修正版）](./chapters/06-docker-cli-cheatsheet.md) | 建映像 / 跑容器 / compose / daemon（含常見錯誤修正） | ✅ 已收錄 | `docker-cli-cheatsheet` v1.0.0 |
-| 07 · ... | （待補：esggo 全端、CI/CD 流水線、SEO for SPA…） | ⏳ 規劃中 | — |
+| [07 · SPA 前端 SEO 實踐](./chapters/07-spa-frontend-seo.md) | JSON-LD / hreflang / canonical / robots+sitemap（FTG 官網） | ✅ 已收錄 | `frontend-seo-for-spa` v1.1.0 |
+| 08 · ... | （待補：esggo 全端、CI/CD 流水線、TDD…） | ⏳ 規劃中 | — |
 
 ## 如何使用
 
