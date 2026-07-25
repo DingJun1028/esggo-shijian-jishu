@@ -12,7 +12,7 @@
 |------|----------------|------|
 | **A. 規劃與設計** | 動手前先把多步實作寫成可執行計畫 | [12 計畫模式](./chapters/12-plan-mode.md) |
 | **B. 開發與品質紀律** | 寫碼當下的工程紀律：先測後碼、找根因 | [10 TDD](./chapters/10-test-driven-development.md)、[11 系統化除錯](./chapters/11-systematic-debugging.md) |
-| **C. 協作與版本控制** | 與他人/與自己的程式碼如何存放、審閱、合併 | [01 倉庫管理](./chapters/01-github-remote-organization.md)、[02 PR 協作](./chapters/02-github-pr-workflow.md) |
+| **C. 協作與版本控制** | 與他人/與自己的程式碼如何存放、審閱、合併；以及遠端倉庫的收納/清理（archive/rename/delete/sync/autolink/deploy-key） | [01 倉庫管理](./chapters/01-github-remote-organization.md)、[02 PR 協作](./chapters/02-github-pr-workflow.md) |
 | **D. 建置與封裝** | 把程式碼變成可交付的成品（映像/套件） | [06 Docker CLI](./chapters/06-docker-cli-cheatsheet.md) |
 | **E. 部署與上線** | 把成品送到可服務使用者的環境 | [04 VPS 部署](./chapters/04-vps-deployment.md)、[05 Firebase 部署](./chapters/05-firebase-learning-center-deploy.md)、[09 CI/CD 推送](./chapters/09-cicd-push-to-deploy.md)、[07 SPA SEO](./chapters/07-spa-frontend-seo.md) |
 | **F. 跨切面與導覽** | 橫跨多支柱的基礎設施，以及全系統地圖 | [03 Actions Secrets](./chapters/03-github-actions-secrets.md)、[08 全端總覽](./chapters/08-esggo-full-stack.md) |
@@ -37,7 +37,7 @@
 | Design 設計 | ⚠️ | — | 缺口（架構決策、需求拆解未專章） |
 | Design 設計 | ⚠️ | — | **已由第 12 章 plan 的「Architecture / 作法」段涵蓋**（不另開篇，避免重疊） |
 | Review 審查 | ✅ | 13 | 已涵蓋 |
-| Collaborate 協作/版本 | ✅ | 01, 02 | 已涵蓋 |
+| Collaborate 協作/版本 | ✅ | 01, 02 | 已涵蓋（含倉庫收納/清理：archive/rename/delete/sync/autolink/deploy-key） |
 | Build 建置 | ✅ | 06 | 已涵蓋 |
 | Test 測試基礎設施 | ⚠️ | 10（含 pytest） | 部分；vitest/jest 實作細節未專章 |
 | Deploy 部署 | ✅ | 04, 05, 09, 07 | 已涵蓋（自管 infra / 託管 PaaS / pipeline / 前品質） |

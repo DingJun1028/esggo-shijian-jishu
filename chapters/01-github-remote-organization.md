@@ -92,6 +92,8 @@ gh repo edit --add-topic "machine-learning,python"
 gh repo edit --enable-auto-merge
 gh repo edit --delete-branch-on-merge          # 合併後自動刪 head 分支
 gh repo edit --enable-squash-merge             # 預設 squash 合併
+gh repo edit --enable-secret-scanning           # 進階安全：秘密掃描
+gh repo edit --enable-secret-scanning-push-protection   # 推送時擋住已洩漏密鑰（秘密防漏的整理動作）
 ```
 
 curl 降級（topics）：

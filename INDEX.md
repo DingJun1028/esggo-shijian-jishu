@@ -9,6 +9,7 @@
 | 我想做 | 看章節 | 關鍵命令速記 |
 |--------|--------|--------------|
 | 建新 GitHub 倉庫 / fork / 設 topics / 分支保護 | [01](./chapters/01-github-remote-organization.md) | `gh repo create` / `gh repo fork` / `gh repo edit --add-topic` |
+| 收納/清理遠端倉庫（封存長草 repo、改名、刪除、同步 fork、autolink、deploy-key、秘密防漏） | [01](./chapters/01-github-remote-organization.md) | `gh repo archive` / `gh repo rename` / `gh repo delete --yes` / `gh repo sync` / `gh repo edit --enable-secret-scanning-push-protection` |
 | 開分支、寫 commit、發 PR、等 CI、合併 | [02](./chapters/02-github-pr-workflow.md) | `git checkout -b feat/x` / `gh pr create` / `gh pr merge --squash` |
 | 設/讀/跨倉搬 Actions secrets（含 write-only 限制） | [03](./chapters/03-github-actions-secrets.md) | `gh secret set` / `gh api -X DELETE` / mirror workflow |
 | 把網站/deploy 到 VPS（nginx/certbot/Cloudflare/Docker） | [04](./chapters/04-vps-deployment.md) | `certbot --nginx` / `ssh ... reload nginx` / 健康檢查 curl |
