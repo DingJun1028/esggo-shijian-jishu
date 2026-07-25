@@ -9,6 +9,7 @@
 - 來自 Hermes Agent GitHub 技能庫的「遠端倉庫整理技能」整編為實踐章節
 - ESGGO 各專案的實戰方法論：PR 協作、Actions secrets、VPS 部署、Firebase 學習中心部署
 - 可複製貼上的命令、部署流程、排錯清單
+- 可執行的輔助腳本（`scripts/repo-inventory.sh` 遠端倉庫盤點 + `.github/workflows` 選用排程）
 
 ## 目錄
 
@@ -34,7 +35,7 @@
 | [15 · 監控與事故響應](./chapters/15-monitoring-incident-runbook.md) | 三層探活 / 事故分級 / 回滾 runbook（G3） | ✅ 已收錄 | 第 04 章 + esggo-core 實踐 |
 | [16 · 本地開發環境上手](./chapters/16-local-dev-onboarding.md) | 各 repo 上手對照 / .env / 換機注意（G4） | ✅ 已收錄 | 各章實證 + 記憶規範 |
 | [17 · 安全強化](./chapters/17-security-hardening.md) | 依賴/注入/最小權限/SSRF（G5，超 secrets） | ✅ 已收錄 | 第 13 章 + pnpm 規範 |
-| [18 · 遠端倉庫健康檢查 Runbook](./chapters/18-repo-health-runbook.md) | 收納/清理週期化：盤點/封存/刪除/同步/保護/secret 輪換 | ✅ 已收錄 | 第 01 章 + 第 17 章 §5 |
+| [18 · 遠端倉庫健康檢查 Runbook](./chapters/18-repo-health-runbook.md) | 收納/清理週期化：盤點/封存/刪除/同步/保護/secret 輪換（+`scripts/repo-inventory.sh`） | ✅ 已收錄 | 第 01 章 + 第 17 章 §5 |
 | — | （Design 缺口由第 12 章 plan 架構段涵蓋，不另開篇） | ✅ 已涵蓋 | 第 12 章 |
 
 ## 如何使用

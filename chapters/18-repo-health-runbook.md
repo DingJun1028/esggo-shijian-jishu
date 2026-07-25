@@ -69,9 +69,21 @@ gh repo deploy-key list
 - **保留但加保護**：仍活躍、多人協作 → 主分支加保護（CI 過 + 1 review）。
 - **secret 輪換**：凡是貼進 chat 過、或對應服務已遷移的 key，一律視為已暴露，輪換 + 從 git 歷史清除（見第 17 章 §5）。
 
-## 4. 自動化建議（別只靠人工）
+## 4. 自動化（已落成可執行腳本，非只建議）
 
-- 把 §0 盤點腳本排成 cron（每月 1 號），diff 出「新變長草」的 repo 名單。
+本技書已把盤點自動化為可執行產物（非紙上建議）：
+
+- `scripts/repo-inventory.sh` — 盤點腳本，本地 `gh` 登入即可跑：
+  - `bash scripts/repo-inventory.sh` → 產 `inventory/repo-inventory-YYYY-MM-DD.md` 並印表格（依長草天數排序）。
+  - `bash scripts/repo-inventory.sh --diff` → 與上一期比對，列出「新變長草」的 repo（本期超閾值、上期未超）。
+  - 環境變數覆寫：`INVENTORY_LIMIT`（預設 300，帳號 repo 多時調高）、`STALE_DAYS`（預設 365）、`OUTDIR`（預設 `inventory/`）。
+  - 已實際對 `DingJun1028` 帳號跑通：抓到 264 個 repo、52 個長草候選（>365d 未 push 且未封存）。
+- `.github/workflows/repo-inventory.yml` — 可選 GitHub Actions 排程（每月 1 號 09:07 UTC），把快照上傳為 artifact。
+  - **前置（必須手動設定）**：在 repo `Settings → Secrets` 新增 `REPO_INVENTORY_TOKEN`（具 `read:org` + `repo` 範圍的 PAT）。未設時 job 會 `::error::` 清楚報錯並 fail fast，不會靜默產錯。
+  - 也可以完全不要本 workflow，改在本機手動跑腳本——兩者互斥、擇一即可。
+
+其他自動化提醒：
+
 - CI 倉庫內跑 `gh secret list` 不易（write-only），改用「每次部署失敗時懷疑 secret 過期」的反向信號（見第 03 章）。
 - fork 同步：`gh repo sync` 可手動跑；多 fork 時寫迴圈遍歷 `$GH_USER/*`。
 

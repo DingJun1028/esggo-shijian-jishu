@@ -1,0 +1,50 @@
+# 可選：遠端倉庫健康盤點自動化（本技書第 18 章 §4）
+#
+# 排程：每月 1 號 09:07 UTC 跑一次 scripts/repo-inventory.sh，把快照上傳為 artifact。
+# 前置（必須手動設定，否則 job 會失敗）：
+#   Settings → Secrets and variables → Actions → New repository secret
+#     名稱：REPO_INVENTORY_TOKEN
+#     值：具 read:org + repo 範圍的 PAT（本技書為 DingJun1028 帳號下私有倉庫盤點所需）
+# 說明：本技書原則是「不假裝會自己跑」——未設 secret 時 step 會 fail fast 並清楚報錯，
+#       不會靜默產出錯誤結果。也可以完全不要本檔，改在本機手動跑 bash scripts/repo-inventory.sh。
+
+name: repo-inventory
+
+on:
+  schedule:
+    - cron: '7 9 1 * *'   # 每月 1 號 09:07 UTC
+  workflow_dispatch:       # 允許手動觸發測試
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安裝 gh
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y gh
+
+      - name: 登入（需 REPO_INVENTORY_TOKEN secret）
+        env:
+          TOKEN: ${{ secrets.REPO_INVENTORY_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::error::未設定 secret REPO_INVENTORY_TOKEN，請到 Settings → Secrets 新增（需 read:org + repo 範圍的 PAT）。" >&2
+            exit 1
+          fi
+          echo "$TOKEN" | gh auth login --with-token
+
+      - name: 跑盤點
+        run: bash scripts/repo-inventory.sh
+
+      - name: 上傳快照為 artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo-inventory-${{ github.run_id }}
+          path: inventory/
+          retention-days: 90

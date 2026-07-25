@@ -1,0 +1,3 @@
+# 倉庫盤點腳本產出的當期快照（見 scripts/repo-inventory.sh / 第18章）
+inventory/
+.repo-inventory-tmp.json
